@@ -66,5 +66,7 @@ task * schedule_periodic (int period, worker_routine * workitem, void *context){
       //Only scenario is for current running task
      while(cancel_schedule(cur_id) !=TRUE)
              ; //do nothing - try canceling the task
-     return; 
+     free_task();
+     return;
+     
  }   
